@@ -1,0 +1,21 @@
+#mapid {
+    height: 380px;
+}
+
+#mapid,
+#reservation {
+    width: 49%;
+    display: inline-block;
+}
+
+#reservation {
+    display: none;
+}
+
+#indication {
+    width: 49%;
+}
+
+canvas{
+    border: 1px solid black;
+}
