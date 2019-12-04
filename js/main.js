@@ -1,45 +1,61 @@
-//évènements :
-
-    //chargement de la page
-
-    //clic sur un marqueur
-
-    //clic sur le bouton d'envoi du formulaire
-
-    //chargement de la carte
-
-    //réponse requête
+//création de la carte
+let myMap = L.map(mapId);
 
 
-//acions :
-
-    //afficher le slider
-
-    //créer la carte
-
-    //paramétrer la carte
-
-    //créer le modèle de marqueur
-
-    //récupérer les coordonnées gps de chaque station
-
-    //placer un marqueur sur chaque emplacement de station
-
-    //récupérer l'adresse, le nombre de vélos disponibles et le nombre de places libres d'une station
-
-    //afficher l'adresse, le nombre de vélos disponibles et le nombre de places libres d'une station
+//création des objets carte, canvas et formulaire
+const bikesMap = new Map(53.35, -6.26, 13);
+const signCanvas = new Canvas("signCanvas");
+const bookingForm = new Form();
+const instructionsDiapos = new Diapos();
+const diaposSlider = new Slider();
 
 
+//informations pour le diaporama
+let diapos = [
+    {
+        "explanation": "1 Je trouve la station la plus proche de chez moi",
+        "image": "../images/Diapo/diapo1.png"
+    },
+    {
+        "explanation": "2 Je clique sur le marqueur pour vérifier la disponibilité d'un vélo",
+        "image": "../images/Diapo/diapo2.png"
+    },
+    {
+        "explanation": "3 Je remplis le formulaire et je clique sur 'Réserver'",
+        "image": "../images/Diapo/diapo3.png"
+    },
+    {
+        "explanation": "4 Je signe et je clique à nouveau sur le bouton pour confirmer",
+        "image": "../images/Diapo/diapo4.png"
+    },
+    {
+        "explanation": "5 Je vais retirer mon vélo à la station sélectionnée, dans un délais de 20 minutes",
+        "image": "../images/Diapo/diapo5.png"
+    }
+]
 
 
-//créer la carte et l'initialiser
+//affichage de la consigne
+bookingForm.welcome();
+//paramétrage et affichage de la carte
+bikesMap.printMap();
+//création et affichage des marqeurs
+bikesMap.printMarkers();
 
-//afficher les marqueurs sur les zones de stations
 
-//ajouter les informations d'une station quand on clique sur le marqueur correspondant
+//création des diapos
+for (let i = 0; i < 5; i++) {
 
-//afficher le formulaire au clic sur un marqueur
+    //appel de création des conteneurs de diapos : je n'arrive pas à y insérer images et titres ensuite. donc création en html directement
+    //instructionsDiapos.createDiapoContainer("slider", "diapo" + i);
 
-//afficher le cadre de signature à l'envoi du formulaire
+    //on remplit les diapos
+    instructionsDiapos.fillDiapoContainer("diapo" + i, diapos[i].image, diapos[i].explanation);
 
-//à l'envoie d'un formulaire : afficher la réservation avec lieu, nom et temps restant
+}
+
+
+diaposSlider.initSlider();
+
+let i = 0;
+diaposSlider.setInterval();

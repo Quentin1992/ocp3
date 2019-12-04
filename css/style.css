@@ -1,21 +1,90 @@
-#mapid {
-    height: 380px;
+body {
+    font-family: sans-serif;
+    margin: 0px;
+    background-color: #FFFFFF;
 }
 
-#mapid,
-#reservation {
+#title {
+    background-color: #F2F2F2;
+    color: #333333;
+    padding: 1em;
+}
+
+#mapId {
+    height: 600px;
+}
+
+#mapId,
+#infos {
     width: 49%;
     display: inline-block;
 }
 
-#reservation {
-    display: none;
+#booking {
+    background-color: #F5F5F5;
 }
 
-#indication {
+#titles h3 {
     width: 49%;
+    color: #FFFFFF;
+    display: inline-block;
 }
 
-canvas{
-    border: 1px solid black;
+#titles {
+    background-color: #4D6A79;
+}
+
+#diaposContainer {
+    width: 1200px;
+    margin: auto;
+}
+
+canvas {
+    border: 1px solid #000000;
+}
+
+.diapo {
+    height: 500px;
+    width: 100%;
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+
+.diapo h3 {
+    background-color: black;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+nav div {
+    height: 20px;
+    width: 20px;
+    background-color: black;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+nav div:hover {
+    background-color: grey;
+}
+
+nav {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.diapo img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#slider {
+    position: relative;
+    height: 500px;
+    background-color: #00355F;
 }

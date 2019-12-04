@@ -12,28 +12,56 @@
 
 <body>
 
-    <div id="mapid"></div>
-    <p id="indication">Cliquez sur un emplacement de station pour en obtenir les informations.</p>
-    <div id="reservation">
-        <div>
-            <p>Adresse : <span id="address"></span></p>
-            <p><span id="stands"></span> place(s)<br />
-            <span id="bikes"></span> vélo(s) disponible(s)</p>
-        </div>
+    <div id="title"><h1>Location de vélos à Dublin</h1></div>
+    
+    <div id="slider">
+        <div id="diaposContainer">
+            
+            <div id="diapo0" class="diapo"></div>
+            <div id="diapo1" class="diapo"></div>
+            <div id="diapo2" class="diapo"></div>
+            <div id="diapo3" class="diapo"></div>
+            <div id="diapo4" class="diapo"></div>
 
-        <form>
-            <input type="text" name="lastname"><br />
-            <input type="text" name="firstname"><br />
-            <input type="submit" value="Réserver">
-        </form>
-        <canvas id="canvas"></canvas>
+            <nav>
+                <div id="d0Button" class="diapoButton"></div>
+                <div id="d1Button" class="diapoButton"></div>
+                <div id="d2Button" class="diapoButton"></div>
+                <div id="d3Button" class="diapoButton"></div>
+                <div id="d4Button" class="diapoButton"></div>
+                <div id="pauseSliderButton"></div>
+            </nav>
+            
+        </div>
     </div>
 
+    <div id="booking">
 
-    <script src="../js/ajax.js"></script>
+        <div id="titles">
+            <h3>Carte des stations</h3>
+            <h3>Réservation</h3>
+        </div>
+
+        <div>
+            <div id="mapId"></div>
+            <div id="infos"></div>
+        </div>
+
+    </div>
+
+    <p id="confirmation"></p>
+
+
+
     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/diapos.js"></script>
+    <script src="../js/slider.js"></script>
     <script src="../js/carte.js"></script>
+    <script src="../js/form.js"></script>
+    <script src="../js/canvas.js"></script>
+    <script src="../js/main.js"></script>
 
 </body>
 
